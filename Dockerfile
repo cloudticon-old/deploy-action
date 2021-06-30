@@ -1,7 +1,7 @@
 FROM node:14
 
 RUN apt-get update -y
-RUN apt-get install curl jq
+RUN apt-get install curl jq -y
 RUN curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
 RUN chmod 700 get_helm.sh
 RUN ./get_helm.sh
