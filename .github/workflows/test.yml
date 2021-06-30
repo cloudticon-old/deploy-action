@@ -5,5 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: We test it locally with act
     steps:
+      - name: chekout
+        uses: actions/checkout@v2
+
       - name: Test
         uses: ./ # Uses an action in the root directory
