@@ -1,0 +1,9 @@
+on: [push]
+
+jobs:
+  custom_test:
+    runs-on: ubuntu-latest
+    name: We test it locally with act
+    steps:
+      - name: Test
+        uses: ./ # Uses an action in the root directory
