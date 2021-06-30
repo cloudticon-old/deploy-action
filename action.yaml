@@ -1,15 +1,11 @@
-name: 'Blog Custom Github Action'
-description: 'Call an API and get the result'
+name: 'Deploy Cloudticon Github Action'
+description: 'Deploy Cloudticon Github Action'
 inputs:
-  pokemon_id:
-    description: 'number of the pokemon in the pokedex'
+  cloudticon_auth:
+    description: 'cloudticon auth document'
     required: true
-    default: 1
-outputs:
-  pokemon_name:
-    description: 'Name des Pokemons'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.pokemon_id}}
+    - ${{ inputs.cloudticon_auth}}
