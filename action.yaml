@@ -6,6 +6,6 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://a7w0de9q.gra7.container-registry.ovh.net/cloudticon/deploy-action:latest'
+  image: 'docker://a7w0de9q.gra7.container-registry.ovh.net/cloudticon/deploy-action:master'
   args:
     - ${{ inputs.cloudticon_auth}}
