@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-mkdir -p functions
-mkdir -p ~/.kube/config
-mkdir -p ~/.docker/config.json
+mkdir -p functions/node_modules
+mkdir -p ~/.kube
+mkdir -p ~/.docker
 
 cd functions
 
