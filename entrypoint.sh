@@ -1,17 +1,10 @@
 #!/bin/bash
 set -e
 
-mkdir -p functions/node_modules
-mkdir -p ~/.kube
-mkdir -p ~/.docker
-
+mkdir -p functions
 cd functions
 
-echo $INPUT_KUBECONFIG |  jq -r '.kube' > ~/.kube/config
-echo $INPUT_CLOUDTICON_AUTH > ~/.docker/config.json
-
-cat ~/.kube/config
-kubectl get pod -A
+cloudticon login -t $INPUT_CLOUDTICON_TOKEN
 cloudticon build
 cloudticon push
 cloudticon helm

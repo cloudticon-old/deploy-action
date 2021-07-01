@@ -19,6 +19,7 @@ RUN ./get_helm.sh
 RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 RUN chmod +x kubectl
 RUN mv kubectl /usr/local/bin/kubectl
+
 RUN yarn global add @cloudticon/cli
 
 COPY entrypoint.sh /entrypoint.sh

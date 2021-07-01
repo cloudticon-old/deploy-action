@@ -1,15 +1,11 @@
 name: 'Deploy Cloudticon Github Action'
 description: 'Deploy Cloudticon Github Action'
 inputs:
-  cloudticon_auth:
-    description: 'cloudticon auth document'
-    required: true
-  kubeconfig:
-    description: 'cloudticon auth document'
+  cloudticon_token:
+    description: 'cloudticon auth token'
     required: true
 runs:
   using: 'docker'
   image: 'docker://a7w0de9q.gra7.container-registry.ovh.net/cloudticon/deploy-action:master'
   args:
-    - ${{ inputs.cloudticon_auth}}
-    - ${{ inputs.kubeconfig}}
+    - ${{ inputs.cloudticon_token}}
