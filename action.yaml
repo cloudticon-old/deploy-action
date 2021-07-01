@@ -4,6 +4,9 @@ inputs:
   cloudticon_auth:
     description: 'cloudticon auth document'
     required: true
+  kubeconfig:
+    description: 'cloudticon auth document'
+    required: true
 runs:
   using: 'docker'
   image: 'docker://a7w0de9q.gra7.container-registry.ovh.net/cloudticon/deploy-action:master'
