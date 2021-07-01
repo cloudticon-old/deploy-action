@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+yarn global upgrade @cloudticon/cli
 mkdir -p functions
 cd functions
 
