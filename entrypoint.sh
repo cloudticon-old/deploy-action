@@ -10,7 +10,7 @@ cd functions
 echo $INPUT_KUBECONFIG |  jq -r '.kube' > ~/.kube/config
 echo $INPUT_CLOUDTICON_AUTH > ~/.docker/config.json
 
-cat /root/.kube/config
+cat ~/.kube/config
 kubectl get pod -A
 cloudticon build
 cloudticon push

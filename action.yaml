@@ -12,3 +12,4 @@ runs:
   image: 'docker://a7w0de9q.gra7.container-registry.ovh.net/cloudticon/deploy-action:master'
   args:
     - ${{ inputs.cloudticon_auth}}
+    - ${{ inputs.kubeconfig}}
