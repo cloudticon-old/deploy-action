@@ -7,4 +7,4 @@ cd functions
 
 cloudticon --version
 cloudticon login -t $INPUT_CLOUDTICON_TOKEN
-cloudticon functions deploy
+eval $INPUT_COMMAND
