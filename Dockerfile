@@ -23,8 +23,6 @@ RUN mv kubectl /usr/local/bin/kubectl
 RUN yarn global add @cloudticon/cli
 
 COPY entrypoint.sh /entrypoint.sh
-
-# change permission to execute the script and
 RUN chmod +x /entrypoint.sh
 
 # file to execute when the docker container starts up
